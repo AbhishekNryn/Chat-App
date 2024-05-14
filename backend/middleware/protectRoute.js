@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 
 const protectRoute = async (req, res, next) => {
     try {
-        const token = req.cookies.jwt;  //used coookieParser for accessing the cookie
+        const token = req.cookies.jwt;  //used cookieParser for accessing the cookie
         if (!token)
         {
             return res.status(401).json({error:"no token, authorization denied"})
