@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 import cookieParser from "cookie-parser"
 import authRouter from "./routes/auth.routes.js"
 import messageRouter from "./routes/message.routes.js"
+import userRouter from "./routes/user.routes.js"
 import connectToMongoDB from "./db/connection.js";
 
 const app = express()
@@ -19,6 +20,7 @@ app.use(cookieParser()) //this called to access the cookies for example in prote
 
 app.use("/api/auth", authRouter);
 app.use("/api/message", messageRouter);
+app.use("/api/users", userRouter);
 
 
 app.listen(PORT, () => {
