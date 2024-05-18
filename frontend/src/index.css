@@ -9,3 +9,21 @@ body{
     background-size: cover;
     background-position: center;
 }
+
+/* Webkit-based browsers */
+::-webkit-scrollbar {
+    width: 8px; /* Reduced width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #555; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555; /* Thumb color */
+    border-radius: 5px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #242424; /* Thumb color on hover */
+}
